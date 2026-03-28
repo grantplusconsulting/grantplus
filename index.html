@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korea Visa Eligibility Test</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <img src="images/logo.png" alt="Company Logo" class="top-left-logo">
+    <div class="app-container">
+        <!-- Hero Section -->
+        <section id="hero-section" class="screen active-screen">
+            <div class="glass-card text-center slide-up">
+                <img src="images/korea-flag.png" alt="South Korea Flag" class="korea-flag">
+                <div class="badge">Viza olish ehtimolini tekshirish</div>
+                <h1 class="headline">Atigi <span class="highlight">2 daqiqada</span> Koreya vizasini olish
+                    imkoniyatingizni bilib oling!</h1>
+                <p class="subheadline">8 ta oddiy savolga javob bering va viza tasdiqlanish ehtimolini foizda bilib
+                    oling.</p>
+                <button id="start-btn" class="primary-btn glow-effect">Testni boshlash</button>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="screen">
+            <div class="glass-card quiz-card">
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="question-header">
+                    <span id="question-counter">Savol 1/8</span>
+                </div>
+                <h2 id="question-text" class="question-text">Savol matni bu yerda bo'ladi</h2>
+                <div id="options-container" class="options-container">
+                    <!-- Options injected via JS -->
+                </div>
+                <div class="action-row">
+                    <button id="next-btn" class="primary-btn" disabled>Keyingi savolga o'tish</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Capture Section -->
+        <section id="lead-section" class="screen">
+            <div class="glass-card text-center">
+                <h2 class="section-title">Natijangizni ko‘rish uchun ma’lumotlaringizni kiriting.</h2>
+                <p class="section-desc">Viza tasdiqlanish ehtimoli hisoblab chiqildi! Natijani bilish uchun
+                    ma'lumotlaringizni to'g'ri kiriting!</p>
+                <form id="lead-form" class="lead-form">
+                    <div class="input-group">
+                        <label for="full-name">ISM FAMILYANGIZNI KIRITING!</label>
+                        <input type="text" id="full-name" required placeholder="Khoshimov Azizbek" autocomplete="name">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone-number">TELEFON RAQAMINGIZNI KIRITING!</label>
+                        <input type="tel" id="phone-number" required placeholder="+998 XXXXXX" autocomplete="tel"
+                            maxlength="14" pattern="^\+998\s?\d{9}$">
+                    </div>
+                    <button type="submit" id="submit-lead-btn" class="primary-btn glow-effect w-100 mt-4">Natijani
+                        ko'rish</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section id="result-section" class="screen">
+            <div class="glass-card text-center result-card">
+                <h2 class="result-title">Sizning Koreya vizasini olish ehtimolingiz</h2>
+
+                <div class="score-circle-container">
+                    <svg class="progress-ring" width="160" height="160">
+                        <circle class="progress-ring__circle-bg" stroke="rgba(255,255,255,0.1)" stroke-width="12"
+                            fill="transparent" r="70" cx="80" cy="80" />
+                        <circle class="progress-ring__circle" id="score-ring" stroke="url(#gradient)" stroke-width="12"
+                            fill="transparent" r="70" cx="80" cy="80" />
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#3b82f6" />
+                                <stop offset="100%" stop-color="#8b5cf6" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="score-text">
+                        <span id="result-percentage">0</span>%
+                    </div>
+                </div>
+
+                <div class="result-message" id="result-message">
+                    <h3 id="result-heading">Sizning Koreya vizasini olish ehtimolingiz yuqori</h3>
+                    <p id="result-desc">To'g'ri hujjatlarni tayyorlash bilan vizani olish ehtimoli yuqori.</p>
+                </div>
+
+                <a id="telegram-guide-btn" href="https://t.me/GrantPlusConsulting_bot" target="_blank"
+                    class="primary-btn glow-effect mt-4 w-100"
+                    style="display:inline-block; text-decoration:none; box-sizing: border-box;"><i
+                        class="fab fa-telegram-plane" style="margin-right: 8px;"></i> Bepul qo'llanmani olish</a>
+
+                <!-- Footer -->
+                <div class="result-footer mt-4">
+                    <p>Biz bilan bog'laning:</p>
+                    <div class="social-links">
+                        <a href="tel:+998331131700" class="social-icon" title="Telefon"><i class="fas fa-phone"></i></a>
+                        <a href="https://t.me/grantplus" target="_blank" class="social-icon" title="Telegram"><i
+                                class="fab fa-telegram-plane"></i></a>
+                        <a href="https://instagram.com/grantplus_consulting" target="_blank" class="social-icon"
+                            title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Hidden Certificate Template -->
+    <div style="position: absolute; left: -9999px; top: 0;">
+        <div id="certificate-template"
+            style="width: 1400px; height: 1000px; padding: 50px; background-color: #0f172a; background-image: radial-gradient(circle at top right, rgba(139, 92, 246, 0.25), transparent 40%), radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.25), transparent 40%); color: #f8fafc; font-family: 'Inter', sans-serif; position: relative; box-sizing: border-box; overflow: hidden;">
+
+            <!-- Glass Card Background inside the certificate -->
+            <div
+                style="background: rgba(30, 41, 59, 0.7); border: 2px solid rgba(255, 255, 255, 0.1); border-radius: 40px; padding: 70px; box-shadow: 0 14px 50px 0 rgba(0, 0, 0, 0.37); width: 100%; height: 100%; box-sizing: border-box; text-align: center; position: relative; z-index: 10;">
+
+                <!-- Logos Row -->
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 50px;">
+                    <img src="images/logo.png" alt="Logo"
+                        style="height: 96px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5));">
+                    <img src="images/korea-flag.png" alt="Flag"
+                        style="height: 84px; border-radius: 10px; box-shadow: 0 7px 15px rgba(0,0,0,0.3);">
+                </div>
+
+                <h1
+                    style="font-size: 73px; margin-top: 15px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;">
+                    <span
+                        style="background: linear-gradient(to right, #3b82f6, #8b5cf6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Sertifikat</span>
+                </h1>
+
+                <p style="font-size: 28px; color: #94a3b8; margin-top: 15px; font-weight: 500; letter-spacing: 1px;">
+                    Koreya vizasini olish ehtimolini tekshirish testi natijalari</p>
+
+                <p style="font-size: 35px; margin-top: 70px; color: #f8fafc; font-weight: 300;">Ushbu sertifikat
+                    GrantPlus Consulting tomonidan berildi</p>
+
+                <!-- Name Field -->
+                <h2 id="cert-name"
+                    style="font-size: 63px; color: #f8fafc; margin: 25px 0; padding-bottom: 15px; border-bottom: 3px solid rgba(255,255,255,0.1); display: inline-block; min-width: 700px; font-weight: 700;">
+                    Ism Familiya</h2>
+
+                <p style="font-size: 31px; margin-top: 40px; color: #94a3b8;">Viza olish ehtimolligi natijasi:</p>
+
+                <!-- Score Box -->
+                <div
+                    style="margin: 35px auto; display: inline-block; padding: 20px 70px; background: rgba(59, 130, 246, 0.15); border-radius: 35px; border: 2px solid rgba(59, 130, 246, 0.3); box-shadow: 0 0 35px rgba(59, 130, 246, 0.2);">
+                    <span id="cert-score-text"
+                        style="font-size: 42px; font-weight: 700; color: #60a5fa; text-shadow: 0 3px 15px rgba(0,0,0,0.5);">Yuqori
+                        (80%)</span>
+                </div>
+
+                <!-- Bottom Elements -->
+                <div style="position: absolute; bottom: 60px; left: 70px; text-align: left;">
+                    <p
+                        style="font-size: 24px; color: #94a3b8; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 2px;">
+                        Sana</p>
+                    <p id="cert-date" style="font-size: 28px; font-weight: 600; color: #f8fafc;">12.03.2026</p>
+                </div>
+
+                <div style="position: absolute; bottom: 60px; right: 70px; text-align: right;">
+                    <p
+                        style="font-size: 24px; color: #94a3b8; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 2px;">
+                        Tashkilot</p>
+                    <p style="font-size: 28px; font-weight: 600; color: #f8fafc;">GrantPlus Consulting</p>
+                    <p style="font-size: 21px; color: #64748b; margin-top: 7px;">+998 33 113 17 00 </p>
+                </div>
+
+            </div>
+
+            <!-- Decorative Elements -->
+            <div
+                style="position: absolute; width: 525px; height: 525px; background: rgba(139, 92, 246, 0.1); filter: blur(70px); border-radius: 50%; top: -175px; right: -175px; z-index: 1;">
+            </div>
+            <div
+                style="position: absolute; width: 525px; height: 525px; background: rgba(59, 130, 246, 0.1); filter: blur(70px); border-radius: 50%; bottom: -175px; left: -175px; z-index: 1;">
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
