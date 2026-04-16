@@ -116,19 +116,19 @@ function init() {
     const phoneInput = document.getElementById('phone-number');
     
     // Set initial value
-    phoneInput.value = '+998 ';
+    phoneInput.value = '998 ';
     
     // Format and restrict phone number input
     phoneInput.addEventListener('input', function(e) {
         let val = this.value;
         
         // Ensure +998 prefix exists and cannot be deleted
-        if (!val.startsWith('+998 ')) {
-            val = '+998 ' + val.replace(/^\+998/, '').replace(/^ /, '');
+        if (!val.startsWith('998 ')) {
+            val = '998 ' + val.replace(/^\998/, '').replace(/^ /, '');
         }
         
         // Remove any non-digit characters after the prefix
-        const prefix = '+998 ';
+        const prefix = '998 ';
         let digits = val.substring(prefix.length).replace(/\D/g, '');
         
         // Limit to 9 digits after prefix
