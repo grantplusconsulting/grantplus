@@ -124,7 +124,7 @@ function init() {
         
         // Ensure +998 prefix exists and cannot be deleted
         if (!val.startsWith('998 ')) {
-            val = '998 ' + val.replace(/^\998/, '').replace(/^ /, '');
+            val = '998 ' + val.replace(/^998/, '').replace(/^ /, '');
         }
         
         // Remove any non-digit characters after the prefix
