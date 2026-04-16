@@ -141,7 +141,7 @@ function init() {
 
     // Prevent cursor from going before prefix
     phoneInput.addEventListener('keydown', function(e) {
-        if (this.selectionStart < 5 && ['Backspace', 'ArrowLeft', 'Delete'].includes(e.key)) {
+        if (this.selectionStart < 4 && ['Backspace', 'ArrowLeft', 'Delete'].includes(e.key)) {
             e.preventDefault();
         }
     });
